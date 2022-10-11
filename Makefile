@@ -10,3 +10,10 @@ format:
 		
 test:
 		python -m pytest -vv --cov=hello test_hello.py
+		
+docker_build:
+		docker build --tag=clickecho .
+		docker image ls
+		
+docker_run:
+		docker run -it clickecho ./hello.py --path . --ftype py 
